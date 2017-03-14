@@ -119,23 +119,23 @@ public:
             throw TNotFoundException("error, not found");
         }
 
-        TNode * curNode = Root;
+        TNode * Сur = Root;
 
         do {
-        if (curNode->Data != value)
+        if (Сur->Data != value)
         {
-            if (curNode->Data > value)
-                curNode = curNode->Left;
+            if (Сur->Data > value)
+                Сur = Сur->Left;
             else
             {
-                curNode = curNode->Right;
+                Сur = Сur->Right;
             }
         }
-        else return curNode;
+        else return Сur;
     }
-    while (curNode != nullptr);
-        throw TNotFoundException("error, not found");
+    while (Сur != nullptr);
 
+        throw TNotFoundException("error, not found");
     }
 
     friend std::ostream& operator << (std::ostream & out, const TBinaryTree& tree);
