@@ -133,8 +133,7 @@ public:
             }
             }
             else return curNode ;
-        }
-        while (curNode  != nullptr);
+        } while (curNode  != nullptr);
 
         throw TNotFoundException("error, not found");
     }
