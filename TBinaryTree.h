@@ -125,12 +125,10 @@ public:
         {
             if (curNode->Data != value)
             {
-            if (curNode->Data > value)
-                curNode  = curNode->Left;
-            else
-            {
-                curNode  = curNode->Right;
-            }
+                if (curNode->Data > value)
+                    curNode  = curNode->Left;
+                else
+                    curNode  = curNode->Right;
             }
             else return curNode ;
         } while (curNode  != nullptr);
