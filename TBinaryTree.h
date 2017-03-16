@@ -115,7 +115,8 @@ public:
     // Если элемента в дереве не найдено, то функция генерирует исключение TNotFoundException
     TNode * Find(const value_type & value)
     {
-        if (Root == nullptr){
+        if (Root == nullptr)
+        {
             throw TNotFoundException("error, not found");
         }
 
