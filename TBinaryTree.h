@@ -119,21 +119,22 @@ public:
             throw TNotFoundException("error, not found");
         }
 
-        TNode * Сur = Root;
+        TNode * curNode = Root;
 
-        do {
-        if (Сur->Data != value)
+        do
         {
-            if (Сur->Data > value)
-                Сur = Сur->Left;
+            if (curNode->Data != value)
+            {
+            if (curNode->Data > value)
+                curNode  = curNode->Left;
             else
             {
-                Сur = Сur->Right;
+                curNode  = curNode->Right;
             }
+            }
+            else return curNode ;
         }
-        else return Сur;
-    }
-    while (Сur != nullptr);
+        while (curNode  != nullptr);
 
         throw TNotFoundException("error, not found");
     }
